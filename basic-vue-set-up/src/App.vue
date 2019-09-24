@@ -1,34 +1,28 @@
 <template>
   <div id="app" >
-    <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <!-- <img alt="Brand" src="..."> -->
-            Sample Navbar
-          </a>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Vue js</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <!-- 
+
+            For proper routing we  have to use router-link
+            otherwise every link  will always routed to / (if u are using '/' as the index page)
+            Otherwise you shouldnt  have a '/'  route. 
+             -->
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/aboutus">About Us</router-link>
+          </li>
+        </ul>
       </div>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-12"></div>  
-        <div class="col-12">
-          <p>
-            Add here static contents! If you have something which is dynamic then add it in the router view
-            Now we have installed bootstrap
-            Let's see how we can import it in our project
-            Just go to the main.js, import the  bootstrap module
-            then import the bootstrap.css from ditributable file path
-            lets build a simple  header for hello world website
-          </p>
-        </div>  
-
-      </div>  
-
-    </div>
-    
-    
     <router-view/>
   </div>
 </template>
@@ -45,7 +39,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*text-align: center;*/
-  color: #2c3e50;
+  /* color: #2c3e50; */
   /* margin-top: 60px; */ 
 }
 </style>
